@@ -1,0 +1,26 @@
+{
+  "name": "a11y-unit-test-wp",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "repository": "felixzapata/a11y-unit-test-wp",
+  "author": {
+    "name": "Felix Zapata",
+    "email": "fzberlinches@gmail.com",
+    "url": "github.com/felixzapata"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-axe-webdriver": "^1.1.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5"
+  }
+}
