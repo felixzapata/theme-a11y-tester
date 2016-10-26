@@ -4,6 +4,15 @@ var axeWebDriver = require('gulp-axe-webdriver');
 
 var url = 'http://wcsantander/';
 
+var validateUrl = function (userInput) {
+	if (userInput === 'localhost') {
+		return true;
+	} else {
+		var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
+		return regexp.test(userInput);
+	}
+};
+
 var returnJSONResults = function () {
 	var XMLPath = require('path').join(__dirname, 'theme-unit-test-data.xml');
 	var fs = require('fs');
