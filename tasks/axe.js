@@ -1,8 +1,9 @@
 'use strict';
 var gulp = require('gulp');
 var axeWebDriver = require('gulp-axe-webdriver');
-
-var url = 'http://wcsantander/';
+var util = require('gulp-util');
+var existsUrlParam = process.argv.indexOf('-url') !== -1;
+var url = process.argv[4];
 
 var validateUrl = function (userInput) {
 	if (userInput === 'localhost') {
@@ -42,14 +43,20 @@ function readXML() {
 }
 
 gulp.task('axe', function (done) {
-	var options = {
-		urls: readXML(),
-		showOnlyViolations: true,
-		verbose: true,
-		saveOutputIn: 'allHtml.json',
-		browser: 'phantomjs'
-	};
-	return axeWebDriver(options, done);
+	if (existsUrlParam && validateUrl(url)) {
+		var options = {
+			urls: readXML(),
+			showOnlyViolations: true,
+			verbose: true,
+			saveOutputIn: 'allHtml.json',
+			browser: 'phantomjs'
+		};
+		return axeWebDriver(options, done);
+	} else {
+		util.log(util.colors.red('Please enter a valid url'));
+		done();
+	}
+
 });
 
 
