@@ -15,6 +15,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-axe-webdriver": "^1.1.0",
+    "gulp-util": "^3.0.7",
     "xml2js": "^0.4.17"
   },
   "devDependencies": {
