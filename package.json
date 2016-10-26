@@ -12,7 +12,11 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "scripts": {
+    "preinstall": "node getA11yThemeUnitTest.js"
+  },
   "dependencies": {
+    "chalk": "^1.1.3",
     "gulp": "^3.9.1",
     "gulp-axe-webdriver": "^1.1.0",
     "gulp-util": "^3.0.7",
