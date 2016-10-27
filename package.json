@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "preinstall": "node getA11yThemeUnitTest.js"
+    "postinstall": "node getA11yThemeUnitTest.js"
   },
   "dependencies": {
     "chalk": "^1.1.3",
