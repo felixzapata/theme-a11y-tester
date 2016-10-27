@@ -4,6 +4,7 @@ var axeWebDriver = require('gulp-axe-webdriver');
 var util = require('gulp-util');
 var existsUrlParam = process.argv.indexOf('-url') !== -1;
 var url = process.argv[4];
+var urlsToRead = [];
 
 var validateUrl = function (userInput) {
 	if (userInput === 'localhost') {
@@ -44,8 +45,12 @@ function readXML() {
 
 gulp.task('axe', function (done) {
 	if (existsUrlParam && validateUrl(url)) {
-		var options = {
-			urls: readXML(),
+		var options = {};
+		if(urlsToRead.length === 0) {
+			urlsToRead = readXML();
+		}
+		options = {
+			urls: urlsToRead,
 			showOnlyViolations: true,
 			verbose: true,
 			saveOutputIn: 'allHtml.json',
