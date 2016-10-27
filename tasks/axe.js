@@ -15,7 +15,7 @@ var validateUrl = function (userInput) {
 };
 
 var returnJSONResults = function () {
-	var XMLPath = require('path').join(__dirname, 'theme-unit-test-data.xml');
+	var XMLPath = require('path').join(__dirname, 'a11y-theme-unit-test-data.xml');
 	var fs = require('fs');
 	var xml2js = require('xml2js');
 	var urls;
