@@ -1,6 +1,8 @@
 # theme-a11y-tester
 An environment for testing WordPress themes for the accessibility-ready requirements.
 
+This environment is based in the use of [gulp-axe-webdriver](https://github.com/felixzapata/grunt-axe-webdriver).
+
 ## Requirements
 
 * [Node.js](https://nodejs.org/es/).
@@ -14,7 +16,11 @@ Download this repository or clone it and then run `npm install`.
 
 ## How to use
 
-`gulp axe`
+### Examples
 
-This environment is based in the use of [gulp-axe-webdriver](https://github.com/felixzapata/grunt-axe-webdriver)
+`gulp axe -url http://www.my-WordPress-url-to-analyze.com`
+
+`gulp axe -url http://my-local-WordPress-url-to-analyze`
+
+
 
