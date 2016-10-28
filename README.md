@@ -18,9 +18,9 @@ Download this repository or clone it and then run `npm install`.
 
 ### Examples
 
-`gulp axe -url http://www.my-WordPress-url-to-analyze.com`
+`gulp themeA11yTester -url http://www.my-WordPress-url-to-analyze.com`
 
-`gulp axe -url http://my-local-WordPress-url-to-analyze`
+`gulp themeA11yTester -url http://my-local-WordPress-url-to-analyze`
 
 
 

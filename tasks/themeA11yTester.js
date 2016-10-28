@@ -49,7 +49,7 @@ let readXML = function () {
 	return returnJSONResults();
 }
 
-gulp.task('axe', (done) => {
+gulp.task('themeA11yTester', (done) => {
 	if (existsUrlParam && validateUrl(url)) {
 		var options = {};
 		if(urlsToRead.length === 0) {
